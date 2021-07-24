@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'AngularApr2021';
+  title = 'hello, Angular!';
+
+  users=[
+    {name:'Inna', age: 38, status: true},
+    {name:'Maksim', age: 42, status: true},
+    {name:'Bohdasya', age: 11, status: true},
+    {name:'Nazar', age: 5, status: true},
+  ]
 }

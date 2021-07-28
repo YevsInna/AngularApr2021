@@ -8,6 +8,9 @@ import { PostsComponent } from './posts/posts.component';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {routes} from "./routes/basic-routes";
 import { UserComponent } from './user/user.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { PostDetailsComponent } from './post-details/post-details.component';
+import { PostComponent } from './post/post.component';
 
 
 
@@ -17,6 +20,9 @@ import { UserComponent } from './user/user.component';
     UsersComponent,
     PostsComponent,
     UserComponent,
+    UserDetailsComponent,
+    PostDetailsComponent,
+    PostComponent,
 
   ],
   imports: [

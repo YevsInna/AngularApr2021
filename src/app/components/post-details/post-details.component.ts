@@ -9,10 +9,11 @@ import {Router} from "@angular/router";
 })
 export class PostDetailsComponent implements OnInit {
 post:IPost
-  constructor(private router:Router) { }
 
-  ngOnInit(): void {
-  this.post= this.router.getCurrentNavigation()?.extras.state as IPost;
+  constructor(private router:Router) {
+    this.post = this.router.getCurrentNavigation()?.extras.state as IPost;
   }
+
+  ngOnInit(): void { }
 
 }

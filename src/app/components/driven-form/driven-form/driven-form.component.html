@@ -2,5 +2,5 @@
   <select name="username" [(ngModel)]="user.username">
     <option *ngFor="let user of users">{{user.name}}"></option>
   </select>
-  <button>ok</button>
+  <button (click)="navigateToUserDetails()">ok</button>
 </form>

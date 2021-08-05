@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {IUser} from "../../../models/IUser";
 import {UserService} from "../../../services/user.service";
-import {Router, Routes} from "@angular/router";
 
 @Component({
   selector: 'app-driven-form',
@@ -9,22 +8,18 @@ import {Router, Routes} from "@angular/router";
   styleUrls: ['./driven-form.component.scss']
 })
 export class DrivenFormComponent implements OnInit {
-user={
-  username: ''
-}
+  userInfo : IUser;
+  userId: number;
   users: IUser[];
 
-  constructor(private userService:UserService, private router:Router) { }
+  constructor(private userService:UserService) { }
 
   ngOnInit(): void {
     this.userService.getUsers().subscribe(value => this.users=value)
   }
 
-  save(tref: HTMLFormElement) {
-
+  save(tref : HTMLFormElement) {
+    this.userService.getUserById(this.userId).subscribe(value => this.userInfo = value);
   }
 
-  navigateToUserDetails():void {
-    this.router.navigate(['users', this.user.id])
-  }
 }

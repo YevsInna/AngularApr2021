@@ -1,0 +1,10 @@
+<form [formGroup]="myForm" (ngSubmit)="save()">
+  <div>
+    <input type="text" formControlName="username">
+    <span *ngIf="myForm.controls.username.errors?.required">input required</span>
+  </div>
+  <div>
+    <input type="text" formControlName="password">
+  </div>
+  <button [disabled]="myForm.invalid">save</button>
+</form>

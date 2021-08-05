@@ -7,11 +7,11 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 import { DrivenFormComponent } from './components/driven-form/driven-form/driven-form.component';
 import {Route, RouterModule, Routes} from "@angular/router";
-import { UserComponent } from './components/user/user/user.component';
+import { UsersComponent } from './components/user/users.component';
 
 let routes: Routes=[
   {
-    path: 'https://jsonplaceholder.typicode.com/users', component: UserComponent
+    path: 'https://jsonplaceholder.typicode.com/users', component: UsersComponent
   }
 ]
 @NgModule({
@@ -20,7 +20,7 @@ let routes: Routes=[
     TdFormComponent,
     ReactiveFormComponent,
     DrivenFormComponent,
-    UserComponent,
+    UsersComponent,
 
   ],
   imports: [

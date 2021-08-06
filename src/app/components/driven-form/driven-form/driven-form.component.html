@@ -2,7 +2,7 @@
   <select name="name" [(ngModel)]="userId">
     <option *ngFor="let user of users" value="{{user.id}}">{{user.name}}"></option>
   </select>
-  <button>ok</button>
+  <button (click)="navigateToUserDetails()">ok</button>
 </form>
 
 {{userInfo | json}}
